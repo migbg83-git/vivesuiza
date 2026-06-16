@@ -1,0 +1,29 @@
+<main class="container py-5">
+  <section class="mb-5">
+    <p class="text-uppercase small text-muted mb-2">ViveSuiza</p>
+    <h1>Vivir, trabajar y prosperar en Suiza</h1>
+    <p class="lead">
+      Guías prácticas para españoles que quieren mudarse a Suiza o ya viven aquí.
+    </p>
+  </section>
+
+  <section>
+    <h2>Primeros artículos</h2>
+
+    @if (articles$ | async; as articles) {
+      <div class="row g-4 mt-2">
+        @for (article of articles; track article.slug) {
+          <article class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <p class="small text-muted mb-2">{{ article.category }}</p>
+                <h3 class="h5">{{ article.title }}</h3>
+                <p>{{ article.description }}</p>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    }
+  </section>
+</main>
