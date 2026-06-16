@@ -9,7 +9,7 @@ author: "Miguel Benito García"
 featured: true
 ---
 
-# Vivir en Suiza desde España: guía inicial
+## Introducción
 
 Mudarse a Suiza no empieza cuando llegas al aeropuerto. Empieza mucho antes: cuando empiezas a comparar salarios, permisos, alquileres, seguros médicos e idiomas.
 
