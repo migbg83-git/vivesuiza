@@ -1,0 +1,30 @@
+<main class="container py-5">
+  @if (category$ | async; as category) {
+    <section class="mb-5">
+      <p class="text-uppercase small text-muted mb-2">Categoría</p>
+      <h1>{{ category }}</h1>
+    </section>
+  }
+
+  @if (articles$ | async; as articles) {
+    <div class="row g-4">
+      @for (article of articles; track article.slug) {
+        <article class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="h5">
+                <a
+                  [routerLink]="['/articulos', article.slug]"
+                  class="text-decoration-none text-dark"
+                >
+                  {{ article.title }}
+                </a>
+              </h2>
+              <p>{{ article.description }}</p>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  }
+</main>

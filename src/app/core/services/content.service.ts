@@ -20,4 +20,10 @@ export class ContentService {
         );
     }
 
+    getArticlesByCategory(category: string): Observable<Article[]> {
+        return this.getArticles().pipe(
+            map((articles) => articles.filter((article) => article.category === category))
+        );
+    }
+
 }
